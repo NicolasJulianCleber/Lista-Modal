@@ -1,20 +1,37 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React from 'react'
+import { View, StyleSheet, Text, TouchableOpacity } from 'react-native'
 
-export default function App() {
-  return (
+const App = () => {
+  return(
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+      <Text style={styles.title}>Animated Modal RN</Text>
+      <TouchableOpacity style={styles.button}>
+        <Text>Open Modal</Text>
+      </TouchableOpacity>
     </View>
-  );
+  )
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#9b59b6',
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'center'
   },
-});
+  title: {
+    color: '#fff',
+    fontSize: 22
+  },
+  button: {
+    height: 50,
+    borderRadius: 10,
+    backgroundColor: '#fff',
+    justifyContent: 'center',
+    alignItems: 'center',
+    width: 300,
+    marginTop: 20
+  }
+})
+
+export default App

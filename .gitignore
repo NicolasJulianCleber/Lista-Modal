@@ -35,3 +35,57 @@ yarn-error.*
 
 # typescript
 *.tsbuildinfo
+
+# Diretórios do Node
+node_modules/
+.babelrc
+
+# Cache do Metro Bundler e outros
+.expo/
+.expo-shared/
+.expo-cache/
+web-build/
+dist/
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+
+# Arquivos do sistema
+.DS_Store
+Thumbs.db
+
+# IDEs e editores
+.vscode/
+.idea/
+*.swp
+
+# Configs locais
+.env
+.env.*
+*.local
+*.log
+
+# Android
+android/.gradle/
+android/app/build/
+android/build/
+android/.idea/
+android/.settings/
+android/local.properties
+
+# iOS
+ios/Pods/
+ios/build/
+ios/.idea/
+
+# Expo Go (logs e cache)
+*.expo
+*.turtle
+
+# Testes
+coverage/
+jest-html-reporters-*
+
+# Outros
+*.keystore
+*.jks
