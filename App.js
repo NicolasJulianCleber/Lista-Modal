@@ -1,35 +1,32 @@
 import React, {useState} from 'react';
 import { View, StyleSheet, Text, TouchableOpacity, FlatList } from 'react-native';
-import Modal from './components/RecipeCard';
+import {Modal, Modal2, Modal3} from './components/RecipeCard';
+
 
 const App = () => {
   // Exemplo de dados
   const data = [
-    {id: '1', nome: '2 ovos' },
-    {id: '2', nome: '1 xícara de chá de açúcar' },
-    {id: '3', nome: '1 xícara de chá de leite' },
-    {id: '4', nome: '2 e 1/2 xícara de chá de farinha de trigo' },
-    {id: '5', nome: '1 colher de sopa de fermento em pó' },
-    {id: '6', nome: 'Uma pitada de sal'},
-    {id: '7', nome: 'Óleo para fritar'},
-    {id: '8', nome: 'Açúcar e canela a gosto para polvilhar'},
-    {id: '9', nome: 'Modo de preparo:'},
-    {id: '10',nome: 'Misture os ingredientes'},
-    {id: '11',nome: 'Frite os bolinhos'},
-    {id: '12',nome: 'Escorra'},
-    {id: '13',nome: 'Finalize'}
+    {id: '1', nome: 'Bolinhos de chuva tradicionais:' },
   ];
+  const data2 =[
+    {id: '1', nome: 'Bolo de chocolate fofinho:'},
+  ]
+  const data3 =[
+    {id: '1', nome: 'Carne cozida com batatas:'},
+  ]
   // Como renderizar cada item
   const renderItem = ({ item }) => (
     <View style={styles.item}>
       <Text style={styles.texto}>{item.nome}</Text>
     </View>
   );
-  const [modal, setModal] = useState(false)
+  const [modal, setModal] = useState(false);
+  const [modal2, setModal2] = useState(false);
+  const [modal3, setModal3] = useState(false);
+  const algumaModalAberto = modal || modal2 || modal3;
   return(
     <View style={styles.container}>
-      <Text style={styles.title}>Receita de Bolinho de Chuva tradicional</Text>
-      <Text style={styles.title}>Ingredientes:</Text>
+      <Text style={styles.title}>Receitas de coisas bem maneirinhas(maneiras mesmo)</Text>
       <Text style={styles.title}>
       <FlatList
         data={data}                   // Os dados da lista
@@ -37,11 +34,33 @@ const App = () => {
         renderItem={renderItem}       // Como renderizar cada item
       />
       </Text>
+      {!algumaModalAberto && (
+      <>
       <TouchableOpacity style={styles.button} onPress={() =>setModal(true)}>
-        <Text>veja com mais detalhes</Text>
+        <Text>Bolinhos de chuva tradicionais</Text>
       </TouchableOpacity>
-      <Modal show={modal} close={() => setModal(false)}/>
+      <Text style={styles.title}>
+      <FlatList data={data2} keyExtractor={(item) => item.id} renderItem={renderItem}></FlatList>
+      </Text>
+
+      <TouchableOpacity style={styles.button} onPress={() =>setModal2(true)}>
+        <Text>Bolo de chocolate fofinho</Text>
+      </TouchableOpacity>
+      <Text style={styles.title}>
+        <FlatList data={data3} keyExtractor={(item) => item.id} renderItem={renderItem}></FlatList>
+      </Text>
+
+        <TouchableOpacity style={styles.button} onPress={() => setModal3(true)}>
+      <Text>Receita de carne cozida com batatas</Text>
+      </TouchableOpacity>
+      </>
+      )}
+    <Modal show={modal} close={() => setModal(false)}/>
+    <Modal2 show={modal2} close={() => setModal2(false)}/>
+    <Modal3 show={modal3} close={() => setModal3(false)}/>
     </View>
+    
+    
   )
 }
 
