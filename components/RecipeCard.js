@@ -50,56 +50,69 @@ useEffect(() => {
         <View style={styles.indicator} />
 
         <Text style={styles.text}>
-          Receba a receita: Receita de Bolinho de Chuva Tradicional
-Ingredientes:
-2 ovos
+          Receba a receita mais detalhada: Receita de Bolinho de Chuva Tradicional
+        </Text>
+        <Text style={styles.text}>
+          Ingredientes:
+          2 ovos: Eles vão ajudar a dar estrutura e leveza na massa.
 
-1 xícara (chá) de açúcar
+          1 xícara de açúcar: Dá o sabor doce típico do bolinho de chuva.
 
-1 xícara (chá) de leite
+          1 xícara de leite: Para deixar a massa na consistência certa, nem muito líquida, nem muito dura.
 
-2 e 1/2 xícaras (chá) de farinha de trigo
+          2 e 1/2 xícaras de farinha de trigo: Essa é a base da massa.
 
-1 colher (sopa) de fermento em pó
+          1 colher (sopa) de fermento em pó: Faz o bolinho crescer e ficar fofinho.
 
-1 pitada de sal
+          1 pitada de sal: Realça o sabor.
 
-Óleo para fritar
+          Óleo para fritar: Use uma quantidade suficiente para os bolinhos ficarem submersos no óleo quente.
 
-Para polvilhar:
+          Para polvilhar depois de frito:
 
-Açúcar e canela a gosto
+          Açúcar + Canela (misture a gosto, geralmente 1 xícara de açúcar para 1 colher de sopa de canela).
+        </Text>
+        <Text style={styles.text}>
+          Modo de preparo detalhado:
+        </Text>
+        <Text style={styles.text}>
+          1. Preparando a massa:
+          Em uma tigela, quebre os ovos e misture bem com o açúcar usando um garfo ou um batedor (fouet). Isso ajuda a deixar os bolinhos mais fofinhos.
 
-Modo de Preparo:
-Misture os ingredientes:
+          Depois, acrescente o leite e continue mexendo.
 
-Em uma tigela, bata os ovos com o açúcar até formar um creme.
+          Agora, vá colocando a farinha de trigo aos poucos, misturando sempre, para não empelotar.
 
-Adicione o leite e misture bem.
+          Coloque uma pitadinha de sal (é só uma pitada mesmo, para equilibrar o sabor doce).
 
-Aos poucos, adicione a farinha de trigo e a pitada de sal, mexendo até formar uma massa lisa e um pouco grossa (não líquida demais).
+          Por último, coloque o fermento em pó e misture devagar. O fermento é o que faz os bolinhos crescerem e ficarem macios por dentro.
+        </Text>
+        <Text style={styles.text}>
+          2. Fritando os bolinhos:
+          Pegue uma panela funda e coloque bastante óleo (o suficiente para os bolinhos boiarem quando fritarem).
 
-Por último, adicione o fermento e mexa delicadamente.
+          Deixe o óleo esquentar bem, mas sem deixar queimar. Uma dica para saber o ponto é jogar um pouquinho de massa no óleo: se subir rapidamente e começar a fritar, está bom.
 
-Frite os bolinhos:
+          Com a ajuda de duas colheres, pegue uma porção de massa (do tamanho de uma colher de sopa) e coloque no óleo quente.
 
-Aqueça o óleo em fogo médio.
+          Frite os bolinhos até ficarem douradinhos de todos os lados, virando eles no óleo se precisar.
+        </Text>
+        <Text style={styles.text}>
+          3. Depois de fritar:
+          Retire os bolinhos com uma escumadeira e coloque em um prato com papel toalha, para tirar o excesso de óleo.
+        </Text>
+        <Text style={styles.text}>
+          4. Finalizando:
+          Misture o açúcar com a canela em um prato ou tigela.
 
-Com a ajuda de duas colheres (ou com as mãos se preferir), vá pegando porções da massa e despejando no óleo quente.
-
-Frite até os bolinhos ficarem douradinhos por fora.
-
-Escorra:
-
-Retire os bolinhos com uma escumadeira e coloque sobre papel toalha para escorrer o excesso de óleo.
-
-Finalize:
-
-Passe os bolinhos ainda quentes em uma mistura de açúcar com canela. E saiba que não entendi oq significa: "Toque em qualquer receita da lista"
+          Passe os bolinhos ainda quentes nessa mistura para ficarem com aquela casquinha doce e perfumada.
+        </Text>
+        <Text style={styles.text}>
+          E saiba que não entendi oq significa: "Toque em qualquer receita da lista"
         </Text>
 
         <TouchableOpacity style={styles.btn} onPress={close}>
-          <Text style={{ color: '#fff' }}>Close</Text>
+          <Text style={{ color: '#fff' }}>Fechar</Text>
         </TouchableOpacity>
       </Animated.View>
     </Animated.View>
@@ -134,7 +147,6 @@ const styles = StyleSheet.create({
     marginTop: 5
   },
   text: {
-    marginTop: 50,
     textAlign: 'center'
   },
   btn: {
